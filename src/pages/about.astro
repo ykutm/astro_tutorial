@@ -1,18 +1,25 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "私について";
 
 const identity = {
-  firstName: "サラ",
-  country: "カナダ",
-  occupation: "技術ライター",
-  hobbies: ["写真", "バードウォッチング", "野球"],
+  firstName: "y",
+  country: "日本",
+  occupation: "Webデザイナー",
+  hobbies: ["読書", "語学学習", "散歩"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "ドキュメントの執筆"];
+const skills = ["HTML", "CSS", "JavaScript", "Design"];
+const learning = ["React", "Astro", "Chinese", "English"];
 
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -23,6 +30,17 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<style define:vars={{skillColor, fontWeight, textCase}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+			.skill {
+    		color: var(--skillColor);
+    		font-weight: var(--fontWeight);
+    		text-transform: var(--textCase);
+ 			}
+    </style>
 	</head>
 	<body>
 		<a href="/">ホーム</a>
@@ -45,7 +63,11 @@ const goal = 3;
 </ul>
 <p>私のスキルは以下の通りです。</p>
 <ul>
-  {skills.map((skill) => <li>{skill}</li>)}
+  {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ul>
+<p>今学習していることは以下の通りです。</p>
+<ul>
+  {learning.map((learn) => <li class="skill">{learn}</li>)}
 </ul>
 
 {happy && <p>I am happy to be learning Astro! Astroを学べて幸せです！</p>}

@@ -1,5 +1,5 @@
 ---
-title: Gitコマンド
+title: Gitチートシート
 author: Astro学習者
 description: "Gitチートシート"
 image:

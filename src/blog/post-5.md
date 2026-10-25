@@ -1,15 +1,15 @@
 ---
-title: Gitチートシート
+title: Gitチートシート - 状態・差分・履歴確認
 author: Astro学習者
-description: "Gitチートシート"
+description: "確認用にまとめた状態・差分・履歴確認のGitのチートシートです "
 image:
   url: "https://docs.astro.build/default-og-image.png"
   alt: "惑星と星のイラストの中にastroという単語があります。"
-pubDate: 2022-08-08
+pubDate: 2026-10-24
 tags: ["astro", "Git"]
 ---
 
-## Gitチートシート
+## Gitチートシート 状態・差分・履歴確認
 
 ### 状態・差分・履歴確認
 
@@ -56,3 +56,7 @@ tags: ["astro", "Git"]
   指定した文字列をコードに追加・削除したコミットのみを表示する\
   `git log --S "<文字列>"`\
   例）`git log -S "class"`
+
+### 参考
+
+[Pro Git book - 2.3 Git の基本 - コミット履歴の閲覧](https://git-scm.com/book/ja/v2/Git-%e3%81%ae%e5%9f%ba%e6%9c%ac-%e3%82%b3%e3%83%9f%e3%83%83%e3%83%88%e5%b1%a5%e6%ad%b4%e3%81%ae%e9%96%b2%e8%a6%a7)

@@ -27,8 +27,22 @@ tags: ["astro", "Git"]
   （ステージされている変更と直近のコミットの内容を比較）\
   `git diff --staged`\
   `git diff --cached`
+
 - ブランチの差分を比較（ローカルのmainとdev）\
   `git diff main..dev`
+
+- ローカルブランチとリモートブランチの差分を見る事前にリモートの最新情報を取得 `git fetch origin`\
+  `git diff [ローカルブランチ名] origin/[リモートブランチ名]`\
+  例（mainブランチの場合）\
+  `git diff main origin/main`\
+  空白文字の違いを無視する場合\
+  `git diff -w main origin/main`\
+  変更されたファイルの「一覧」だけを見る\
+  `bash git diff --name-only [ローカルブランチ名] origin/[リモートブランチ名] `\
+  差分の要約（追加・削除行数など）を見る\
+  `bash git diff --stat [ローカルブランチ名] origin/[リモートブランチ名]`\
+  コミット履歴の差分（どちらにどんなコミットがあるか）を見る\
+  `bash git log [ローカルブランチ名]..origin/[リモートブランチ名] --oneline`\
 
 - コミット履歴の閲覧\
   `git log`\
